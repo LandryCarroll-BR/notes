@@ -1,0 +1,28 @@
+# Ignore build and output directories
+/.next
+/out
+
+# Ignore node_modules directory
+/node_modules
+
+# Ignore coverage reports
+/coverage
+
+# Ignore log files
+*.log
+
+# Ignore compiled files
+*.min.js
+*.min.css
+
+# Ignore version control directories
+/.git
+/.svn
+/.hg
+
+# Ignore specific files
+/.env
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
