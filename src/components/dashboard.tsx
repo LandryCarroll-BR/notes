@@ -1,8 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import { UserButton } from '@clerk/nextjs'
-import { Bot, Home, LineChart, Menu, NotebookIcon, Package, Package2, Search, ShoppingCart, Users } from 'lucide-react'
+import { Bot, Home, Menu, NotebookIcon, Package2, Search } from 'lucide-react'
 
-import { Badge } from '@/ui/badge'
 import { Input } from '@/ui/input'
 import { Button } from '@/ui/button'
 import { Box, Flex, Grid } from '@/components/layout'
