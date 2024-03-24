@@ -7,9 +7,9 @@ export default async function DashboardPage() {
 
   if (!userId) throw new Error('userId undefined')
 
-  const allNotes = await prisma.note.findMany({
-    where: { userId },
-  })
+  // const allNotes = await prisma.note.findMany({
+  //   where: { userId },
+  // })
 
-  return <div>{JSON.stringify(allNotes)}</div>
+  return <div>{userId}</div>
 }
