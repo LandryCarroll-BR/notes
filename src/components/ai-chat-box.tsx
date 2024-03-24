@@ -95,7 +95,7 @@ function AIChatBoxMessage({ message: { role, content } }: { message: Message }) 
   const isUserMessage = role === 'user'
 
   return (
-    <Flex className={cn('mb-3 gap-3', isAiMessage && 'flex-row-reverse')}>
+    <Flex className={cn('mb-3 gap-3', isUserMessage && 'flex-row-reverse')}>
       <Box>
         {isUserMessage && (
           <Avatar className="h-7 w-7">
