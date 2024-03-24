@@ -4,6 +4,7 @@ import '@/styles/globals.css'
 import { cn } from '@/lib/utils'
 import { fontSans } from '@/lib/fonts'
 import { siteConfig } from '@/config/site'
+import { Providers } from '@/components/providers'
 
 export const metadata: Metadata = {
   title: {
@@ -38,10 +39,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    // shortcut: '/favicon-16x16.png',
+    // apple: '/apple-touch-icon.png',
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
 export default function RootLayout({
@@ -50,8 +50,10 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>{children}</body>
-    </html>
+    <Providers>
+      <html lang="en">
+        <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>{children}</body>
+      </html>
+    </Providers>
   )
 }
