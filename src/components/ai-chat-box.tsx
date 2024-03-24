@@ -45,7 +45,7 @@ function AIChatBoxContent({ children, ...props }: AIChatBoxContentProps) {
       {...props}
     >
       <AIChatBoxCloseButton
-        className="absolute right-0 top-0 m-2 h-6 w-6 rounded-lg p-1"
+        className="absolute right-0 top-0 z-20 m-2 h-6 w-6 rounded-lg p-1"
         size={'icon'}
         variant={'ghost'}
       >
