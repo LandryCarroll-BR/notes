@@ -11,5 +11,5 @@ export default async function DashboardPage() {
     where: { userId },
   })
 
-  return <Dashboard notes={allNotes} />
+  return <div>{JSON.stringify(allNotes)}</div>
 }
