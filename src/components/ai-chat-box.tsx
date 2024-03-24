@@ -51,7 +51,7 @@ function AIChatBoxContent({ children, ...props }: AIChatBoxContentProps) {
       >
         <XIcon />
       </AIChatBoxCloseButton>
-      <Flex className="h-[600px] flex-col rounded-xl border bg-background shadow-xl">
+      <Flex className="h-[600px] flex-col rounded-xl border bg-background pt-8 shadow-xl">
         <Box className="h-full p-3">
           <ScrollArea className="h-[480px]">
             {messages.map((message) => (
@@ -98,12 +98,12 @@ function AIChatBoxMessage({ message: { role, content } }: { message: Message }) 
     <Flex className={cn('mb-3 gap-3', isUserMessage && 'flex-row-reverse')}>
       <Box>
         {isUserMessage && (
-          <Avatar className="h-7 w-7">
+          <Avatar>
             <AvatarImage src={user?.imageUrl} />
           </Avatar>
         )}
         {isAiMessage && (
-          <Avatar className="flex h-7 w-7 items-center justify-center bg-secondary">
+          <Avatar className="flex items-center justify-center bg-secondary">
             <Bot />
           </Avatar>
         )}
