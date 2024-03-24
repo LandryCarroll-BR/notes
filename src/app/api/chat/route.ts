@@ -4,6 +4,7 @@ import prisma from '@/lib/prisma'
 import { auth } from '@clerk/nextjs'
 import { ChatCompletionMessage } from 'openai/resources/index.mjs'
 import { OpenAIStream, StreamingTextResponse } from 'ai'
+import { Note } from '@/root/prisma/generated/client'
 
 export async function POST(req: Request) {
   try {
@@ -40,7 +41,7 @@ export async function POST(req: Request) {
       content:
         "You are an intelligent note-taking app. You answer the user's question based on their existing notesIndex." +
         'The relevnt notes for this query are:\n' +
-        relevantNotes.map((note) => `Title: ${note.title}\n\n Content:\n${note.content}`).join('\n\n'),
+        relevantNotes.map((note: Note) => `Title: ${note.title}\n\n Content:\n${note.content}`).join('\n\n'),
     }
 
     const response = await openai.chat.completions.create({
