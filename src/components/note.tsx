@@ -1,7 +1,6 @@
 import { Note as NoteModel } from '@prisma/client'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 import { AddEditNoteDialog } from './add-edit-note-dialog'
-import { Button } from './ui/button'
 
 interface NoteProps {
   note: NoteModel
