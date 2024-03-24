@@ -878,6 +878,7 @@ export namespace Prisma {
 
   export type NoteMinAggregateOutputType = {
     id: string | null
+    title: string | null
     content: string | null
     userId: string | null
     createdAt: Date | null
@@ -886,6 +887,7 @@ export namespace Prisma {
 
   export type NoteMaxAggregateOutputType = {
     id: string | null
+    title: string | null
     content: string | null
     userId: string | null
     createdAt: Date | null
@@ -894,6 +896,7 @@ export namespace Prisma {
 
   export type NoteCountAggregateOutputType = {
     id: number
+    title: number
     content: number
     userId: number
     createdAt: number
@@ -904,6 +907,7 @@ export namespace Prisma {
 
   export type NoteMinAggregateInputType = {
     id?: true
+    title?: true
     content?: true
     userId?: true
     createdAt?: true
@@ -912,6 +916,7 @@ export namespace Prisma {
 
   export type NoteMaxAggregateInputType = {
     id?: true
+    title?: true
     content?: true
     userId?: true
     createdAt?: true
@@ -920,6 +925,7 @@ export namespace Prisma {
 
   export type NoteCountAggregateInputType = {
     id?: true
+    title?: true
     content?: true
     userId?: true
     createdAt?: true
@@ -1001,6 +1007,7 @@ export namespace Prisma {
 
   export type NoteGroupByOutputType = {
     id: string
+    title: string | null
     content: string | null
     userId: string
     createdAt: Date
@@ -1026,6 +1033,7 @@ export namespace Prisma {
 
   export type NoteSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    title?: boolean
     content?: boolean
     userId?: boolean
     createdAt?: boolean
@@ -1034,6 +1042,7 @@ export namespace Prisma {
 
   export type NoteSelectScalar = {
     id?: boolean
+    title?: boolean
     content?: boolean
     userId?: boolean
     createdAt?: boolean
@@ -1046,6 +1055,7 @@ export namespace Prisma {
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: string
+      title: string | null
       content: string | null
       userId: string
       createdAt: Date
@@ -1445,6 +1455,7 @@ export namespace Prisma {
    */ 
   interface NoteFieldRefs {
     readonly id: FieldRef<"Note", 'String'>
+    readonly title: FieldRef<"Note", 'String'>
     readonly content: FieldRef<"Note", 'String'>
     readonly userId: FieldRef<"Note", 'String'>
     readonly createdAt: FieldRef<"Note", 'DateTime'>
@@ -1752,6 +1763,7 @@ export namespace Prisma {
 
   export const NoteScalarFieldEnum: {
     id: 'id',
+    title: 'title',
     content: 'content',
     userId: 'userId',
     createdAt: 'createdAt',
@@ -1840,6 +1852,7 @@ export namespace Prisma {
     OR?: NoteWhereInput[]
     NOT?: NoteWhereInput | NoteWhereInput[]
     id?: StringFilter<"Note"> | string
+    title?: StringNullableFilter<"Note"> | string | null
     content?: StringNullableFilter<"Note"> | string | null
     userId?: StringFilter<"Note"> | string
     createdAt?: DateTimeFilter<"Note"> | Date | string
@@ -1848,6 +1861,7 @@ export namespace Prisma {
 
   export type NoteOrderByWithRelationInput = {
     id?: SortOrder
+    title?: SortOrderInput | SortOrder
     content?: SortOrderInput | SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
@@ -1859,6 +1873,7 @@ export namespace Prisma {
     AND?: NoteWhereInput | NoteWhereInput[]
     OR?: NoteWhereInput[]
     NOT?: NoteWhereInput | NoteWhereInput[]
+    title?: StringNullableFilter<"Note"> | string | null
     content?: StringNullableFilter<"Note"> | string | null
     userId?: StringFilter<"Note"> | string
     createdAt?: DateTimeFilter<"Note"> | Date | string
@@ -1867,6 +1882,7 @@ export namespace Prisma {
 
   export type NoteOrderByWithAggregationInput = {
     id?: SortOrder
+    title?: SortOrderInput | SortOrder
     content?: SortOrderInput | SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
@@ -1881,6 +1897,7 @@ export namespace Prisma {
     OR?: NoteScalarWhereWithAggregatesInput[]
     NOT?: NoteScalarWhereWithAggregatesInput | NoteScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"Note"> | string
+    title?: StringNullableWithAggregatesFilter<"Note"> | string | null
     content?: StringNullableWithAggregatesFilter<"Note"> | string | null
     userId?: StringWithAggregatesFilter<"Note"> | string
     createdAt?: DateTimeWithAggregatesFilter<"Note"> | Date | string
@@ -1889,6 +1906,7 @@ export namespace Prisma {
 
   export type NoteCreateInput = {
     id?: string
+    title?: string | null
     content?: string | null
     userId: string
     createdAt?: Date | string
@@ -1897,6 +1915,7 @@ export namespace Prisma {
 
   export type NoteUncheckedCreateInput = {
     id?: string
+    title?: string | null
     content?: string | null
     userId: string
     createdAt?: Date | string
@@ -1905,6 +1924,7 @@ export namespace Prisma {
 
   export type NoteUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     content?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -1913,6 +1933,7 @@ export namespace Prisma {
 
   export type NoteUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     content?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -1921,6 +1942,7 @@ export namespace Prisma {
 
   export type NoteCreateManyInput = {
     id?: string
+    title?: string | null
     content?: string | null
     userId: string
     createdAt?: Date | string
@@ -1929,6 +1951,7 @@ export namespace Prisma {
 
   export type NoteUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     content?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -1937,6 +1960,7 @@ export namespace Prisma {
 
   export type NoteUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
+    title?: NullableStringFieldUpdateOperationsInput | string | null
     content?: NullableStringFieldUpdateOperationsInput | string | null
     userId?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -1991,6 +2015,7 @@ export namespace Prisma {
 
   export type NoteCountOrderByAggregateInput = {
     id?: SortOrder
+    title?: SortOrder
     content?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
@@ -1999,6 +2024,7 @@ export namespace Prisma {
 
   export type NoteMaxOrderByAggregateInput = {
     id?: SortOrder
+    title?: SortOrder
     content?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
@@ -2007,6 +2033,7 @@ export namespace Prisma {
 
   export type NoteMinOrderByAggregateInput = {
     id?: SortOrder
+    title?: SortOrder
     content?: SortOrder
     userId?: SortOrder
     createdAt?: SortOrder
